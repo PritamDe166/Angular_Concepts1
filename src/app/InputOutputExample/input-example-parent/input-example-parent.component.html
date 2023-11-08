@@ -1,0 +1,43 @@
+<br>
+<div class="row justify-content-evenly">
+    <div class="col-md-5 ">
+        <div class="card">
+            <div class="card-header">
+              Parent Component section
+            </div>
+            <div class="card-body">
+              <div class="card">
+                <div class="card-body">
+                  <form #userForm = "ngForm">
+                    <div class="form-group">
+                      <label for="name">Name</label>
+                      <input type="text" class="form-control" 
+                        name="Name" id="name"
+                        [(ngModel)] = "userData.name"
+                      >
+                    </div>
+                    <div class="form-group">
+                      <label for="department">Department</label>
+                      <input type="text" class="form-control" 
+                        name="Department" id="department"
+                        [(ngModel)]="userData.department"
+                      >
+                    </div><br>
+                    <button type="submit" class="btn btn-primary" (click)="bindData(userForm)">Submit</button>
+                  </form>
+                </div>
+              </div>              
+            </div>
+          </div>
+    </div>
+    <div class="col-md-5">
+        <div class="card">
+           <div class="card-header">
+              Child Component Section
+           </div>
+           <div class="card-body">
+
+           </div>          
+        </div>
+    </div>
+</div>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './Navbar/navbar/navbar.component';
@@ -10,7 +10,8 @@ import { HomeComponent } from './Home/home/home.component';
 import { ParentRouterOutletComponent } from './parent-router-outlet/parent-router-outlet.component';
 import { TemplateDrivenComponent } from './Forms/template-driven/template-driven.component';
 import { ReactiveFormsComponent } from './Forms/reactive-forms/reactive-forms.component';
-
+import { InputExampleParentComponent } from './InputOutputExample/input-example-parent/input-example-parent.component';
+import { InputExampleChildComponent } from './InputOutputExample/input-example-child/input-example-child.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,12 +20,15 @@ import { ReactiveFormsComponent } from './Forms/reactive-forms/reactive-forms.co
     HomeComponent,
     ParentRouterOutletComponent,
     TemplateDrivenComponent,
-    ReactiveFormsComponent
+    ReactiveFormsComponent,
+    InputExampleParentComponent,
+    InputExampleChildComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
