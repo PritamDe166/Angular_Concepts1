@@ -12,6 +12,7 @@ import { TemplateDrivenComponent } from './Forms/template-driven/template-driven
 import { ReactiveFormsComponent } from './Forms/reactive-forms/reactive-forms.component';
 import { InputExampleParentComponent } from './InputOutputExample/input-example-parent/input-example-parent.component';
 import { InputExampleChildComponent } from './InputOutputExample/input-example-child/input-example-child.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { InputExampleChildComponent } from './InputOutputExample/input-example-c
     TemplateDrivenComponent,
     ReactiveFormsComponent,
     InputExampleParentComponent,
-    InputExampleChildComponent
+    InputExampleChildComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
