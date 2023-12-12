@@ -9,12 +9,12 @@ import { LoginComponent } from './Login/login/login.component';
 import { routeGuardExampleGuard } from './route-guard-example.guard';
 
 const routes: Routes = [
-  {path: '', redirectTo:'login', pathMatch: 'full'},
+  {path: '', redirectTo:'home', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
-  {path: 'home',canActivate : [routeGuardExampleGuard] , component: HomeComponent},
-  {path: 'templateDriven', component: TemplateDrivenComponent},
-  {path: 'reactive', component: ReactiveFormsComponent},
-  {path: 'inputOutput', component: InputExampleParentComponent},
+  {path: 'home', canActivate : [routeGuardExampleGuard] , component: HomeComponent},
+  {path: 'templateDriven', canActivate : [routeGuardExampleGuard], component: TemplateDrivenComponent},
+  {path: 'reactive', canActivate : [routeGuardExampleGuard], component: ReactiveFormsComponent},
+  {path: 'inputOutput', canActivate : [routeGuardExampleGuard], component: InputExampleParentComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 

@@ -17,7 +17,7 @@
                         <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email" [(ngModel)]="loginData.email">
                         <label for="floatingInput">Email address</label>
                     </div>
-                    <div class="d-grid">
+                    <div class="d-grid" *ngIf="this.loginData.fullName && this.loginData.email">
                         <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit" (click)="loginFn(loginForm)">Sign in</button>
                     </div>
                 </form>

@@ -1,10 +1,16 @@
 import { inject } from '@angular/core';
 import { CanActivateFn, Router } from '@angular/router';
+import { tokenKey } from 'src/app/Data-Models/ContantsFile';
 
 
-export const routeGuardExampleGuard: CanActivateFn = (route, state) => {
+export const routeGuardExampleGuard: CanActivateFn = (route, state) => {  
   const router = inject(Router);
-  
-  router.navigate(['login']);
-  return false;
+
+  if(localStorage.getItem(tokenKey)){
+    return true;
+  }
+  else{
+    router.navigate(['login']);
+    return false;
+  }  
 };

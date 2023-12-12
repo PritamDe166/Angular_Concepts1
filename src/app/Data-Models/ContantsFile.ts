@@ -9,3 +9,5 @@ export const UserLoginDetails :  loginUserDetails[]= [
     {fullName : 'Kalyan Singh', email: 'kalyan.singh@gmail.com'},
 ];
 
+
+export const tokenKey = 'my_app_token';

@@ -10,9 +10,9 @@ export class LoginAuthService {
   constructor() { }
 
   validateUserDetails(loginData : loginUserDetails): boolean{
+    
     var returnval : boolean = false;
-    console.log('in service: '+loginData.fullName +', '+loginData.email);
-
+   
     UserLoginDetails.forEach(item => {
       if(item.fullName?.toUpperCase() === loginData.fullName?.toUpperCase() &&
          item.email?.toUpperCase() === loginData.email?.toUpperCase()

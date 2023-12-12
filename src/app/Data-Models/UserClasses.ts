@@ -1,10 +1,10 @@
-export class UserModelforIOEx1 {
+export interface UserModelforIOEx1 {
     name : string | undefined;
     department : string | undefined;
 }
 
 
-export class loginUserDetails{
+export interface loginUserDetails{
     fullName : string | undefined;
     email : string | undefined;
 }

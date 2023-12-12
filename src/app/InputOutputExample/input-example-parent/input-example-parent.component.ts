@@ -9,15 +9,26 @@ import {FormsModule } from '@angular/forms';
 })
 export class InputExampleParentComponent {
 
-  userData : UserModelforIOEx1 = new UserModelforIOEx1();
+  userData : UserModelforIOEx1 = {
+    name : "",
+    department : ""
+  }
+
+  dataFromParent : string = '';
+
+  test1 : string = "";
 
   //constructor
   constructor(){
   }
 
   bindData(form : any){
-    console.log(this.userData?.name);
-    console.log(this.userData?.department);
+    //console.log(this.userData);
+    //this.userData = {...this.userData, name : this.userData.name};
+  }
+
+  parentRecieveEmitter(e : any){
+    this.dataFromParent = e;
   }
 
 }

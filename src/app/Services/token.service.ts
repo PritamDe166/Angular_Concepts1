@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { tokenKey } from 'src/app/Data-Models/ContantsFile';
 
 @Injectable({
   providedIn: 'root'
@@ -6,17 +7,15 @@ import { Injectable } from '@angular/core';
 
 export class TokenService {
 
-  private static TOKEN_KEY = 'my_app_token';
-
   constructor() { }
 
-  private static generateToken() : string{
+  generateToken() : string{
       return Math.random().toString(36).substring(2);
   }
 
-  static saveToken() : void{
+  saveToken() : void{
       const token = this.generateToken();
-      localStorage.setItem(this.TOKEN_KEY, token);
+      localStorage.setItem(tokenKey, token);
   }
 
 }

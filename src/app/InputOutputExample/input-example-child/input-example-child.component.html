@@ -1,1 +1,32 @@
-<p>input-example-child works!</p>
+<div class="card">
+    <div class="card-header">
+       Child Component Section
+    </div>
+    <div class="card-body">
+        <form>
+            <div class="form-group">
+                <label for="name">Name from Parent</label>
+                <input type="text" readonly class="form-control-plaintext" 
+                    name="Name" id="name" [(ngModel)] = "userDetailsfromParent.name">
+            </div>
+            <div class="form-group">
+                <label for="department">Department from Parent</label>
+                <input type="text" readonly class="form-control-plaintext"
+                    name="Department" id="department" [(ngModel)] = "userDetailsfromParent.department">
+            </div>
+            <div class="form-group">
+                <label for="testString">Test String from parent</label>
+                <input type="text" readonly class="form-control-plaintext"
+                    name="testString" id="testString" [(ngModel)] = "testStringfromParent">
+            </div>
+        </form>
+        <hr>
+        <form>
+            <div class="form-group">
+                <label for="stringData">Data to be sent to parent: </label>
+                <input type="text" class="form-control"
+                    name="stringData" id="stringData" [ngModel] = "stringData" (ngModelChange)="sendtoParentEmitter($event)">
+            </div>
+        </form>
+    </div>          
+ </div>
