@@ -13,6 +13,7 @@ import { ReactiveFormsComponent } from './Forms/reactive-forms/reactive-forms.co
 import { InputExampleParentComponent } from './InputOutputExample/input-example-parent/input-example-parent.component';
 import { InputExampleChildComponent } from './InputOutputExample/input-example-child/input-example-child.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FormStatesComponent } from './Forms/form-states/form-states.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ReactiveFormsComponent,
     InputExampleParentComponent,
     InputExampleChildComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    FormStatesComponent
   ],
   imports: [
     BrowserModule,

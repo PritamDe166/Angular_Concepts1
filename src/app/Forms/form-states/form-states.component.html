@@ -1,0 +1,57 @@
+<br>
+<div class="row">
+    <p class="d-inline-flex gap-1">
+        <button class="btn btn-primary" type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+        >
+            Value Changed
+        </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+        <div class="col-md-4">
+            <div class="card card-body">
+                <form #valChangedForm = "ngForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name :</label>
+                        <input type="text" class="form-control" #fullName = "ngModel" name="fullName" id="fullName" [(ngModel)]="employeeDetails.fullName">
+                    </div>
+                    Pristine : {{fullName.pristine}}, 
+                    Dirty : {{fullName.dirty}}
+                    <br><br>
+                    <div class="form-group">
+                        <label for="age">Age :</label>
+                        <input type="text" class="form-control" #age = "ngModel" name="age" id="age" [(ngModel)]="employeeDetails.age">
+                    </div>
+                    Pristine : {{age.pristine}}, 
+                    Dirty : {{age.dirty}}
+                    <br><br>
+                    <div class="form-group">
+                        <label for="department">Department :</label>
+                        <input type="text" class="form-control" #department = "ngModel" name="department" id="department" [(ngModel)]="employeeDetails.department">
+                    </div>
+                    Pristine : {{department.pristine}}, 
+                    Dirty : {{department.dirty}}
+                    <br><br>
+                    <button [disabled]="valChangedForm.pristine" class="btn btn-lg btn-primary mb-2" type="submit" (click)="valChanged(valChangedForm)">Value Changed</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<br>
+<div class="row">
+    <p class="d-inline-flex gap-1">
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2"
+        >
+            Button with data-bs-target
+        </button>
+    </p>
+    <div class="collapse" id="collapseExample2">
+        <div class="card card-body">
+            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+        </div>
+    </div>
+</div>

@@ -7,11 +7,13 @@ import { InputExampleParentComponent } from './InputOutputExample/input-example-
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './Login/login/login.component';
 import { routeGuardExampleGuard } from './route-guard-example.guard';
+import { FormStatesComponent } from './Forms/form-states/form-states.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'home', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
   {path: 'home', canActivate : [routeGuardExampleGuard] , component: HomeComponent},
+  {path: 'formStates', canActivate : [routeGuardExampleGuard], component: FormStatesComponent},
   {path: 'templateDriven', canActivate : [routeGuardExampleGuard], component: TemplateDrivenComponent},
   {path: 'reactive', canActivate : [routeGuardExampleGuard], component: ReactiveFormsComponent},
   {path: 'inputOutput', canActivate : [routeGuardExampleGuard], component: InputExampleParentComponent},
